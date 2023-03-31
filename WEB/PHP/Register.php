@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -22,7 +23,9 @@ $auth = $conn->query($sqlauthUser);
 if ($auth->num_rows == 0){
     $sqlconsult = "INSERT INTO Users(Username,Password,MailAccount,Balance,UserAge,AdminUser) VALUES('$usuario','$passwd','$mail',1000,'$age',0)";
     $resultado = $conn->query($sqlconsult);
-    setcookie("UserLogged", $usuario, time() + 3600, "/");
+    $Userid = $conn->query( "SELECT ID FROM Users WHERE Username = '$usuario' AND Password = '$passwd'");
+    $_SESSION["USERID"]=$Userid;
+    setcookie("UserLogged", $usuario, time() + 3600, "/","",false,false);
     header("Location: ../HTML/RegisterDone.html");
     exit;
 } else {

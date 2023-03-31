@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -17,12 +18,13 @@ $sqlComprovacion = "SELECT * FROM Users WHERE Username = '$usuario' AND Password
 $auth = $conn->query($sqlComprovacion);
 
 if ($auth->num_rows >= 1){
-    setcookie("UserLogged", $usuario, time() + 3600, "/");
+    $Userid = $conn->query( "SELECT ID FROM Users WHERE Username = '$usuario' AND Password = '$passwd'");
+    $_SESSION["USERID"]=$Userid;
+    setcookie("UserLogged", $usuario, time() + 3600, "/","",false,false);
     header("Location: ../HTML/Index.html");
     exit;
 } else {
     echo "Usuario o contraseña incorrectos";
 }
-
 $conn->close();
 ?>
