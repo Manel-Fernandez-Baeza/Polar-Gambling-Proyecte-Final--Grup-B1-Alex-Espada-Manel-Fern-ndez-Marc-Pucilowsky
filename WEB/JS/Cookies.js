@@ -28,3 +28,14 @@ function getCookie(cname) {
         console.log("No User Logged")
     }
   }
+
+  function GameLoginChecker(){
+   if (getCookie("UserLogged") == ""){
+    window.location.replace("../HTML/Register.html");
+   } 
+}
+
+function StartGames(){
+  LoginAuth()
+  GameLoginChecker()
+}

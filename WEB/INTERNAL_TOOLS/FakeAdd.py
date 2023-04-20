@@ -12,7 +12,7 @@ def Ruleta(x):
   x = int(input("Introduce cuantas apuestas quieres meter: "))
   for x in range(x):
     posibilidades = [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,3]
-    posibilidadesVictoria = [0,0,0,0,0,0,0,1,1,1]
+    posibilidadesVictoria = [0,0,0,0,0,0,0,0,1,1]
     resultado = posibilidadesVictoria[random.randint(0,len(posibilidadesVictoria)-1)]
     bet = random.randint(10,10000)
     betResult = 0
@@ -67,5 +67,3 @@ if __name__ == "__main__":
     elif op == 0:
       leave = True
       
-
-  

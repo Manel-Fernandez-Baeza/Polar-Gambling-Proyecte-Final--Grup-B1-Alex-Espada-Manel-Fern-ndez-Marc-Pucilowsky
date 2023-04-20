@@ -1,0 +1,28 @@
+.bodyContent {
+  margin: auto;
+  height: 100%;
+  width: 80%;
+}
+.PolarLogo {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 30%;
+  margin: auto;
+}
+.BonusMSG {
+  width: 80%;
+  height: 10%;
+  margin: auto;
+  display: flex;
+}
+.BonusMSGP {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-family: poppins;
+  color: #0b686a;
+}
+.LogoIndexIMG {
+  height: 120%;
+}

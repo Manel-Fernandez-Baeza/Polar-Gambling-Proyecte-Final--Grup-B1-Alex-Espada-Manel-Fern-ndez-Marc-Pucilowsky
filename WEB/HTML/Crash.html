@@ -4,12 +4,16 @@
     <title>Polar Casino</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../CSS/General.css" />
-    <link rel="stylesheet" href="../CSS/RegisterDone.css" />
+    <link rel="stylesheet" href="../CSS/Index.css" />
     <link rel="icon" href="../ASSETS/LogoCartas.png" type="image/icon type" />
     <script src="../JS/index.js"></script>
     <script src="../JS/Cookies.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
   </head>
-  <body onLoad="LoginAuth()">
+  <body onLoad="StartGames()">
     <header class="sticky">
       <div class="header-parent h75">
         <!-- Header logo-->
@@ -81,7 +85,7 @@
           <div
             class="ShowNavJuegosBoton boton"
             id="Cara-Cruz"
-            onclick="ClickJuegos(this.id)"
+            onClick="ClickJuegos(this.id)"
           >
             Cara o cruz
           </div>
@@ -89,21 +93,21 @@
           <div
             class="ShowNavJuegosBoton boton"
             id="Ruleta"
-            onclick="ClickJuegos(this.id)"
+            onClick="ClickJuegos(this.id)"
           >
             Ruleta
           </div>
           <div
             class="ShowNavJuegosBoton boton"
             id="Slots"
-            onclick="ClickJuegos(this.id)"
+            onClick="ClickJuegos(this.id)"
           >
             Slots
           </div>
           <div
             class="ShowNavJuegosBoton boton"
             id="Crash"
-            onclick="ClickJuegos(this.id)"
+            onClick="ClickJuegos(this.id)"
           >
             Crash
           </div>
@@ -191,23 +195,8 @@
         </div>
       </div>
     </header>
-    <div class="bodyDiv">
-      <div class="DivText">
-        <div class="LogoRegistrado">
-          <img
-            src="../ASSETS/LogoTXT.png"
-            alt="LogoPolar"
-            class="LogoRegistradoIMG"
-          />
-        </div>
-        <div class="TEXTO">BIENVENIDO A POLAR GAMBLING</div>
-        <div class="InicioBack">
-          <button class="boton comeback" onclick="ClickNav('Inicio')">
-            Inicio
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Body-->
+    <div class="bodyDiv"></div>
     <footer class="FooterDad">
       <div class="FooterLogo">
         <img
@@ -220,7 +209,7 @@
         "POLAR GAMBLING CASINO" no tiene transacciones económicas reales. Solo
         se basa en un simulador de casino en línea. En caso de recibir cualquier
         tipo de oferta o propuesta económica acerca de la web, comente con
-        atención al cliente en polargambligsup@gmail.com.
+        atención al cliente en correo@quehayque.inventar.
       </div>
     </footer>
   </body>

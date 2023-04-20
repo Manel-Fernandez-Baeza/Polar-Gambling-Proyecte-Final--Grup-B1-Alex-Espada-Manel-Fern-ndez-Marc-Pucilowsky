@@ -3,6 +3,7 @@
   <head>
     <title>Polar Casino</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="../CSS/General.css" />
     <link rel="stylesheet" href="../CSS/Register.css" />
     <link rel="icon" href="../ASSETS/LogoCartas.png" type="image/icon type" />
     <script src="../JS/index.js"></script>
@@ -13,7 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <body onLoad = LoginAuth()>
+  <body onLoad="LoginAuth()">
     <header class="sticky">
       <div class="header-parent h75">
         <!-- Header logo-->
@@ -82,10 +83,116 @@
       <!-- Menu Juegos Oculto-->
       <div class="ShowNavJuegosBarra" id="BarraJuegos">
         <div class="ShowNavJuegos">
-          <div class="ShowNavJuegosBoton boton" id="Cara-Cruz">Cara o cruz</div>
-          <div class="ShowNavJuegosBoton boton" id="Ruleta">Ruleta</div>
-          <div class="ShowNavJuegosBoton boton" id="Slots">Slots</div>
-          <div class="ShowNavJuegosBoton boton" id="Crash">Crash</div>
+          <div
+            class="ShowNavJuegosBoton boton"
+            id="Cara-Cruz"
+            onclick="ClickJuegos(this.id)"
+          >
+            Cara o cruz
+          </div>
+
+          <div
+            class="ShowNavJuegosBoton boton"
+            id="Ruleta"
+            onclick="ClickJuegos(this.id)"
+          >
+            Ruleta
+          </div>
+          <div
+            class="ShowNavJuegosBoton boton"
+            id="Slots"
+            onclick="ClickJuegos(this.id)"
+          >
+            Slots
+          </div>
+          <div
+            class="ShowNavJuegosBoton boton"
+            id="Crash"
+            onclick="ClickJuegos(this.id)"
+          >
+            Crash
+          </div>
+        </div>
+      </div>
+      <div class="ShowNavQuienesSomosZone MenuFlotante" id="QuienesSomosMenu">
+        <p>
+          Som un petit grup de SMX que ens hem ajuntat per realitzar el treball
+          grupal de final de cicle. Ens diem Alex Espada, Marc Pucilowski i
+          Manel Fernandez i estem molt motivats pel projecte que estem duent a
+          terme. El nostre objectiu és crear un casino online anomenat "Polar
+          Gambling".
+          <br />
+          <br />
+          Cada membre del nostre grup té habilitats úniques i experiència en
+          diferents àrees, el que ens permet treballar junts de manera efectiva
+          per aconseguir els nostres objectius. Estem compromesos en oferir als
+          nostres clients una experiència de joc emocionant i segura, mentre
+          mantenim una actitud responsable envers el joc.
+          <br />
+          <br />
+          Com a equip, ens esforcem per assegurar-nos que tots els aspectes del
+          nostre casino online estiguin en línia amb les normes i regulacions
+          del sector, per garantir la integritat dels nostres serveis i la
+          satisfacció dels nostres clients.
+          <br />
+          <br />
+          Gràcies per visitar la nostra pàgina web i esperem que gaudeixis de la
+          nostra oferta de joc en línia en "Polar Gambling". <br />
+        </p>
+      </div>
+      <div class="ShowNavAboutZone MenuFlotante" id="AboutMenu">
+        <p>
+          Aquest projecte va néixer com a iniciativa per al treball grupal de
+          final de cicle del nostre equip, format per Alex Espada, Marc
+          Pucilowski i Manel Fernandez.
+          <br />
+          <br />
+          L'objectiu principal de "Polar Gambling" és crear una plataforma de
+          joc en línia emocionant i segura. Hem treballat dur per investigar i
+          comprendre les necessitats dels nostres usuaris potencials, i hem
+          utilitzat aquesta informació per dissenyar una experiència de joc que
+          satisfaci les seves expectatives.
+          <br />
+          <br />
+          Durant el procés de desenvolupament, hem utilitzat les eines i
+          tècniques més avançades per garantir que el nostre producte final
+          sigui de la més alta qualitat. Ens hem esforçat per crear una
+          plataforma de joc en línia fàcil d'utilitzar i accessible per a tots
+          els usuaris.
+          <br />
+          <br />
+          Estem emocionats de presentar "Polar Gambling" al món i esperem que
+          els nostres usuaris gaudeixin de la seva experiència de joc. Agraïm el
+          seu interès en el nostre projecte i esperem que es una a nosaltres en
+          aquest emocionant viatge.
+          <img
+            src="../ASSETS/LogoTXT.png"
+            alt="Polar"
+            style="margin: auto; height: 20%; width: 40%"
+          />
+        </p>
+      </div>
+      <div class="MenuFlotante ShowNavContactoZone" id="ContactoMenu">
+        <div class="Instagram">
+          <div class="InstagramIMG">
+            <a href="https://www.instagram.com/polar.gambling/"
+              ><img
+                src="../ASSETS/InstagramLogo.png"
+                alt=""
+                style="height: 40px; width: 40px; float: left"
+            /></a>
+          </div>
+          <div class="InstagramTXT">@polar.gambling</div>
+        </div>
+        <div class="Correo">
+          <div class="CorreoIMG">
+            <img
+              src="../ASSETS/GmailLogo.png"
+              alt="gmail"
+              style="height: 32px; width: 40px; float: left"
+            />
+          </div>
+          <div class="CorreoTXT">polargambligsup@gmail.com</div>
         </div>
       </div>
     </header>
@@ -171,10 +278,10 @@
         />
       </div>
       <div class="footerInfo">
-        POLAR GAMBLING CASINO no tiene transacciones economicas reales, solo se
-        basa en un simulador de casino online, en caso de recibir cualquier tipo
-        de oferta o propuesta economica acerca de la web comentar con Atencion
-        al cliente en: correo@quehayque.inventar
+        "POLAR GAMBLING CASINO" no tiene transacciones económicas reales. Solo
+        se basa en un simulador de casino en línea. En caso de recibir cualquier
+        tipo de oferta o propuesta económica acerca de la web, comente con
+        atención al cliente en polargambligsup@gmail.com.
       </div>
     </footer>
   </body>
