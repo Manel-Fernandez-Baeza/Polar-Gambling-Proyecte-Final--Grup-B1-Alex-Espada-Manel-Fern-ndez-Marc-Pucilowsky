@@ -5,15 +5,17 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../CSS/General.css" />
     <link rel="stylesheet" href="../CSS/Index.css" />
+    <link rel="stylesheet" href="../CSS/CaraCruz.css" />
     <link rel="icon" href="../ASSETS/LogoCartas.png" type="image/icon type" />
     <script src="../JS/index.js"></script>
     <script src="../JS/Cookies.js"></script>
+    <script src="../JS/GeneralGames.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
   </head>
-  <body onLoad="StartGames()">
+  <body onLoad="StartGames();GetBalance();SetBalanceTXT()">  
     <header class="sticky">
       <div class="header-parent h75">
         <!-- Header logo-->
@@ -23,6 +25,7 @@
               src="../ASSETS/LogoTXT.png"
               alt="TXT"
               class="header-logotxtimg h75"
+              onClick="CheatBalance()"
             />
           </div>
           <div class="header-cartas h75">
@@ -30,6 +33,7 @@
               src="../ASSETS/LogoCartas.png"
               alt="logotxt"
               class="header-cartasimg"
+              onClick="SetBalanceTXT()"
             />
           </div>
         </div>
@@ -196,7 +200,30 @@
       </div>
     </header>
     <!-- Body-->
-    <div class="bodyDiv"></div>
+    <div class="bodyDiv">
+      <div class="JuegoGeneral">
+        <div id = "Balance"></div>
+        <div class="CaraCruzBox">
+          <div class="CaraCruzBotones">
+          <div class="CaraButton" id ="CARA" onClick="CaraOCruz(this.id)">
+            <img src="../ASSETS/CARA.png" alt="Cara" style="height: 100%; width: 100%;">
+          </div>
+          <div class="CruzButton" id ="CRUZ" onClick="CaraOCruz(this.id)">
+            <img src="../ASSETS/CRUZ.png" alt="Cruz" style="height: 100%; width: 100%;">
+          </div>
+        </div>
+          <input name="searchTxt" type="text" id="InputBalance">
+          <div class = "ResultsTXT">
+            <img src="../ASSETS/WinTXT.png" alt="" class="ResultTXT" id="WinTXT">
+            <img src="../ASSETS/LoseTXT.png" alt="" class="ResultTXT" id="LoseTXT">
+          </div>
+          <div class ="MonedasIMG">
+            <img src="../ASSETS/CARA.png" alt="Cara" id="CaraIMG" class ="ResultsIMG">
+            <img src="../ASSETS/CRUZ.png" alt="Cruz" id="CruzIMG" calss ="ResultsIMG">
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="FooterDad">
       <div class="FooterLogo">
         <img

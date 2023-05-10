@@ -1,7 +1,5 @@
 import mysql.connector as mariadb
 import matplotlib.pyplot as plt
-import numpy as np
-
 database = mariadb.connect(
   host="localhost",
   user="root",
@@ -63,9 +61,6 @@ def SinglePerson_WoLPercentage_Roulete(iduser):
       plt.text(i, percentajes[i]+1, str(percentajes[i])+'%')
     plt.show()
     
-
-
-
 if __name__ == "__main__":
     while True:
       a = int(input("Escoje 1. Single Person, 2. General "))
